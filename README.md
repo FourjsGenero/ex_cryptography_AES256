@@ -57,7 +57,7 @@ xml.Encryption.DecryptString(
 
 ### Java
 
-- Encryp
+- Encrypt
 ```java
 Cipher cipher = Cipher.getInstance("AES/CBC/PKCS5Padding");    
 cipher.init(Cipher.ENCRYPT_MODE, secretKey, ivParameterSpec);
