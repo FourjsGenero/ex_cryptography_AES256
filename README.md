@@ -2,7 +2,7 @@
 
 Encrypt &amp; Decrypt plaint text messages in 4gl &amp; java
 
-![Genero program launcher (GDC)](url)
+![Genero program launcher (GDC)](https://github.com/FourjsGenero/ex_cryptography_AES256/blob/master/image/presentation.png)
 
 // README UNDER CONSTRUCTION //
 
