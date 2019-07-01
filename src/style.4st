@@ -1,0 +1,12 @@
+<?xml version="1.0" encoding="ANSI_X3.4-1968"?>
+<StyleList>
+    <Style name="TextEdit">
+      <StyleAttribute name="wrapPolicy" value="anywhere" />
+    </Style>
+    <Style name=".blue">
+      <StyleAttribute name="backgroundColor" value="lightBlue" />
+    </Style>
+    <Style name=".bold">
+      <StyleAttribute name="fontWeight" value="bold" />
+    </Style>
+</StyleList>

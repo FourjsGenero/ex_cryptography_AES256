@@ -1,0 +1,73 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<ManagedForm fileVersion="31400" gstVersion="31404" name="managedform" uid="{79d8dec2-050f-44bc-84b0-a44e346ba936}">
+  <AGSettings>
+    <DynamicProperties version="2"/>
+  </AGSettings>
+  <Record name="record1" uid="{0c11f780-a236-4cc1-bfbf-8c8ea2e6e535}">
+    <RecordField fieldIdRef="1" name="e_plaintext" uid="{73707f8f-81e9-4f37-a828-1b61227e542d}"/>
+    <RecordField fieldIdRef="2" name="e_key" uid="{843d2dec-7158-4122-b776-dc5e35523c4f}"/>
+    <RecordField fieldIdRef="3" name="e_iv" sqlType="CHAR" uid="{5a432b2c-84f4-416f-8039-4f081372d197}"/>
+    <RecordField fieldIdRef="4" name="e_encryptedstring" uid="{94170b91-3ac7-48f6-8512-485cda6b35f5}"/>
+    <RecordField fieldIdRef="5" name="e_status" uid="{f497c06b-f639-4259-bfaf-4ac159327439}"/>
+    <RecordField fieldIdRef="6" name="d_encryptedstring" uid="{4f917a45-f5fa-4c2d-93ad-370397273f62}"/>
+    <RecordField fieldIdRef="7" name="d_key" uid="{ae62e54b-3a98-4520-b5be-a4200b9a67c8}"/>
+    <RecordField fieldIdRef="8" name="d_iv" sqlType="CHAR" uid="{daf4d899-ca6c-4a51-94c3-7100991074f0}"/>
+    <RecordField fieldIdRef="10" name="d_status" uid="{cc929f3d-ef60-4fae-a51e-5158618810c8}"/>
+    <RecordField fieldIdRef="9" name="d_plaintext" uid="{d8b57541-0c67-44c1-a6a0-6c6a53ea9a95}"/>
+  </Record>
+  <Form gridHeight="25" gridWidth="148" name="Form" text="Crypto">
+    <HBox gridHeight="25" gridWidth="148" name="hbox1" posX="0" posY="0">
+      <Group gridHeight="25" gridWidth="76" name="group1" posX="2" posY="0" text="Encryption">
+        <Grid gridHeight="23" gridWidth="74" name="grid1" posX="1" posY="1">
+          <Label gridHeight="1" gridWidth="9" name="e_plaintext" posX="1" posY="1" text="Plaintext"/>
+          <TextEdit fieldId="1" gridHeight="3" gridWidth="45" name="e_plaintext" posX="17" posY="1" tabIndex="-1" title="edit1" widget="TextEdit"/>
+          <Label gridHeight="1" gridWidth="1" name="spacer7" posX="3" posY="4" text=""/>
+          <Label gridHeight="1" gridWidth="11" name="e_key" posX="1" posY="5" text="Key (32 characters)"/>
+          <Edit fieldId="2" gridHeight="1" gridWidth="45" name="e_key" posX="17" posY="5" required="true" tabIndex="-1" title="edit2" widget="Edit"/>
+          <Label gridHeight="1" gridWidth="1" name="spacer1" posX="3" posY="6" text=""/>
+          <Label gridHeight="1" gridWidth="10" name="e_iv" posX="1" posY="7" text="Initialization Vector"/>
+          <FFLabel fieldId="3" gridHeight="1" gridWidth="45" name="e_iv" posX="17" posY="7" sqlType="CHAR" title="edit3" widget="FFLabel"/>
+          <Label gridHeight="1" gridWidth="1" name="spacer2" posX="3" posY="8" text=""/>
+          <Label gridHeight="1" gridWidth="9" name="e_encryptedstring" posX="1" posY="9" text="Encrypted string"/>
+          <TextEdit fieldId="4" gridHeight="5" gridWidth="45" name="e_encryptedstring" posX="17" posY="9" tabIndex="-1" title="textedit1" widget="TextEdit"/>
+          <Label gridHeight="1" gridWidth="1" name="spacer6" posX="3" posY="14" text=""/>
+          <HRec gridHeight="1" gridWidth="29" name="hrec1" posX="2" posY="15">
+            <Button gridHeight="1" gridWidth="9" name="encrypt_4gl" posX="0" posY="0" tabIndex="-1" text="Encrypt 4GL"/>
+            <Spacer gridWidth="8" name="spacer3" posX="10" posY="0"/>
+            <Button gridHeight="1" gridWidth="9" name="encrypt_java" posX="19" posY="0" tabIndex="-1" text="Encrypt Java"/>
+          </HRec>
+          <Label gridHeight="1" gridWidth="1" name="spacer8" posX="3" posY="16" text=""/>
+          <FFLabel color="black" fieldId="5" gridHeight="1" gridWidth="63" justify="center" name="e_status" posX="2" posY="17" title="fflabel1" widget="FFLabel"/>
+          <Label gridHeight="1" gridWidth="1" name="spacer13" posX="3" posY="18" text=""/>
+        </Grid>
+      </Group>
+      <Group gridHeight="25" gridWidth="68" name="group2" posX="78" posY="0" text="Decryption">
+        <Grid gridHeight="23" gridWidth="66" name="grid2" posX="1" posY="1">
+          <Label gridHeight="1" gridWidth="9" name="d_encryptedstring" posX="1" posY="1" text="Encrypted string"/>
+          <TextEdit fieldId="6" gridHeight="5" gridWidth="45" name="d_encryptedstring" posX="17" posY="1" tabIndex="-1" title="textedit1" widget="TextEdit"/>
+          <Label gridHeight="1" gridWidth="1" name="spacer9" posX="3" posY="6" text=""/>
+          <Label gridHeight="1" gridWidth="11" name="d_key" posX="1" posY="7" text="Key (32 characters)"/>
+          <Edit fieldId="7" gridHeight="1" gridWidth="45" name="d_key" posX="17" posY="7" required="true" tabIndex="-1" title="edit2" widget="Edit"/>
+          <Label gridHeight="1" gridWidth="1" name="spacer10" posX="3" posY="8" text=""/>
+          <Label gridHeight="1" gridWidth="10" name="d_iv" posX="1" posY="9" text="Initialization Vector"/>
+          <FFLabel fieldId="8" gridHeight="1" gridWidth="45" name="d_iv" posX="17" posY="9" sqlType="CHAR" title="edit3" widget="FFLabel"/>
+          <Label gridHeight="1" gridWidth="1" name="spacer11" posX="3" posY="10" text=""/>
+          <Label gridHeight="1" gridWidth="9" name="d_plaintext" posX="1" posY="11" text="Plaintext"/>
+          <TextEdit fieldId="9" gridHeight="3" gridWidth="45" justify="left" name="d_plaintext" posX="17" posY="11" tabIndex="-1" title="edit1" widget="TextEdit"/>
+          <Label gridHeight="1" gridWidth="1" name="spacer4" posX="3" posY="14" text=""/>
+          <HRec gridHeight="1" gridWidth="29" name="hrec2" posX="2" posY="15">
+            <Button gridHeight="1" gridWidth="9" name="decrypt_4gl" posX="0" posY="0" tabIndex="-1" text="Decrypt 4GL"/>
+            <Spacer gridWidth="8" name="spacer5" posX="10" posY="0"/>
+            <Button gridHeight="1" gridWidth="9" name="decrypt_java" posX="19" posY="0" tabIndex="-1" text="Decrypt Java"/>
+          </HRec>
+          <Label gridHeight="1" gridWidth="1" name="spacer12" posX="3" posY="16" text=""/>
+          <FFLabel color="black" fieldId="10" gridHeight="1" gridWidth="63" justify="center" name="d_status" posX="2" posY="17" title="fflabel1" widget="FFLabel"/>
+          <Label gridHeight="1" gridWidth="1" name="spacer14" posX="3" posY="18" text=""/>
+        </Grid>
+      </Group>
+    </HBox>
+  </Form>
+  <DiagramLayout>
+    <![CDATA[AAAAAgAAAEwAewAwAGMAMQAxAGYANwA4ADAALQBhADIAMwA2AC0ANABjAGMAMQAtAGIAZgBiAGYALQA4AGMAOABlAGEAMgBlADYAZQA1ADMANQB9QCQAAAAAAABAJAAAAAAAAAAAAAAAAAAAAQ==]]>
+  </DiagramLayout>
+</ManagedForm>
