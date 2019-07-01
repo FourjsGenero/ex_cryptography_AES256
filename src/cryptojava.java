@@ -16,6 +16,27 @@ public class cryptojava {
  
 	private static final byte[] iv = {0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0 };
 
+    /*
+    *   Check Java Version
+    */
+    public static String getJavaVersion() {
+		return System.getProperty("java.version");
+	}
+
+    /*
+    *   Check if Java Cryptography Extension (JCE) Unlimited Strength Jurisdiction Policy Files are installed
+    */
+    public static int maxAllowedKeyLength() throws Exception {    
+        // Without the unlimited strength policy files, result is 128
+        // Otherwise the result is 2147483647
+        return Cipher.getMaxAllowedKeyLength("AES");
+    }
+
+    /*
+    *   AES256 ENCRYPT function 
+    *   padding is "PKCS5Padding"
+    *   >output: IV + encrypted string
+    */
 	public static String encrypt(String password, String strToEncrypt) throws Exception {
 		// Generating IV.
 		int ivSize = 16;
@@ -44,7 +65,12 @@ public class cryptojava {
 		return base64Encoded;
 	}
 
-   
+   /*
+    *   AES256 DECRYPT function 
+    *   1. extract IV from strToDecrypt
+    *   2. Decrypt
+    *   3. Remove XML Sec padding
+    */
 	public static String decrypt(String password, String strToDecrypt) throws Exception {
 	 	int ivSize = 16;
 	 	byte[] iv = new byte[ivSize];

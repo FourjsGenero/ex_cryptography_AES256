@@ -72,7 +72,7 @@
     </Language>
   </LanguageList>
   <PlatformList version="1.0"/>
-  <Group id="75644415" label="Group" language="Genero">
+  <Group environment="filelist:CLASSPATH=$(ProjectDir)/lib/commons-codec-1.12.jar" id="75644415" label="Group" language="Genero">
     <Application binaryName="Application" dependencies="14000,1986,190529631" id="18736" label="Application">
       <File filePath="src/crypto.4gl"/>
       <File filePath="src/form.4fd"/>

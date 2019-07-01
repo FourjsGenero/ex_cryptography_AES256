@@ -6,19 +6,24 @@ main
     # Initialize sample
     define e_plaintext string = "Hello World"
     define e_symkey string = "12345678901234567890123456789012"
-    define d_plaintext, d_symkey string
+    define d_symkey string = "12345678901234567890123456789012"
+    define d_plaintext string
     define e_encrypted_str, d_encrypted_str string
     define e_iv string = "-"
     define d_iv string = "-"
-    define isEncypted, isDecrypted boolean
+    define isEncypted, isDecrypted, isJCEenabled boolean
     define ui_form ui.Form
 
     call ui.Interface.loadStyles("style")
     open form w_form from "form"
     display form w_form
     let ui_form = ui.Window.getCurrent().getForm()
-    
+
+    # Check Java Cryptography Extension (JCE) Unlimited Strength Jurisdiction Policy Files are present (otherwise AES256 is not supported)
+    let isJCEenabled = iif(cryptojava.maxAllowedKeyLength() > 1, true, false)
+
     dialog attributes(unbuffered)
+    
         input e_plaintext from e_plaintext attributes(without defaults) end input
         input e_symkey from e_key attributes(without defaults) end input
         input e_iv from e_iv attributes(without defaults) end input 
@@ -84,7 +89,16 @@ main
                     display "Error during decryption" to d_status attributes(bold,red)
                 end try
             end if
-
+                
+        before dialog
+            if not isJCEenabled then  -- If Java dont have JCE (=AES256 not supported)
+                # display warning
+                    message "Your Java does not support AES256.\nYou need to update Java or install Java Cryptography Extension (JCE) Unlimited Strength Jurisdiction Policy Files" attributes(bold,red)
+                # Remove action encrypt/decrypt with java
+                    call DIALOG.setActionActive("encrypt_java", false)
+                    call DIALOG.setActionActive("decrypt_java", false)
+            end if
+            
         on action close
             exit dialog
             
