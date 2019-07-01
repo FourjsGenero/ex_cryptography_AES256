@@ -26,14 +26,17 @@ GST 3.20.05+
 
 ### Spec
 
-AES256 spec : //url
+AES (Advanced Encryption Standard) is a specification for the encryption of electronic data established by the U.S. National Institute of Standards and Technology (NIST) in 2001.
+The algorithm described by AES is a symmetric-key algorithm, meaning the same key is used for both encrypting and decrypting the data.
+
+4gl encryption is based on W3C XML Encryption Syntax and Processing : https://www.w3.org/TR/xmlenc-core1/#sec-Padding
 
 ### Genero
 
 Encrypt
 http://4js.com/online_documentation/fjs-fgl-manual-html/#fgl-topics/c_gws_XmlEncryption_EncryptString.html
 
-```C#
+```C++
 xml.Encryption.EncryptString(
    key xml.CryptoKey,
    strToEncrypt STRING )
@@ -43,7 +46,7 @@ xml.Encryption.EncryptString(
 Decrypt
 http://4js.com/online_documentation/fjs-fgl-manual-html/#fgl-topics/c_gws_XmlEncryption_DecryptString.html
 
-```C#
+```golang
 xml.Encryption.DecryptString(
    key xml.CryptoKey ,
    strToDecrypt STRING )
@@ -59,11 +62,13 @@ cipher.init(Cipher.ENCRYPT_MODE, secretKey, ivParameterSpec);
 byte[] encrypted = cipher.doFinal(strToEncrypt.getBytes("UTF-8"));
 ```
 
-Decrytp
+Decrypt
 ```java
 Cipher cipherDecrypt = Cipher.getInstance("AES/CBC/NoPadding");
 cipherDecrypt.init(Cipher.DECRYPT_MODE, secretKey, ivParameterSpec);
 byte[] decrypted_pad = cipherDecrypt.doFinal(encryptedBytes); 
 ```
 
-// padding?
+### Other
+- Initialization vector (what it is, how to use in 4gl/java)
+- Padding (required to implement java decryption)
