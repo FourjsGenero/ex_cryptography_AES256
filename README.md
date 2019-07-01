@@ -5,8 +5,9 @@ Encrypt &amp; Decrypt plaint text messages in 4gl &amp; java
 ![Genero program launcher (GDC)](https://github.com/FourjsGenero/ex_cryptography_AES256/blob/master/image/presentation.png)
 
 ## Prerequisites
--GST 3.20.05+
--Java 1.8 +
+- GST 3.20.05+
+- Java 1.8 +
+
 If using updates earlier than 8u161 you need to download Java Cryptography Extension (https://www.oracle.com/technetwork/java/javase/downloads/jce-all-download-5170447.html)
 
 ## Compilation in Genero Studio
