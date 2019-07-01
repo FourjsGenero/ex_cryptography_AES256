@@ -4,14 +4,12 @@ Encrypt &amp; Decrypt plaint text messages in 4gl &amp; java
 
 ![Genero program launcher (GDC)](https://github.com/FourjsGenero/ex_cryptography_AES256/blob/master/image/presentation.png)
 
-// README UNDER CONSTRUCTION //
-
 ## Prerequisites
 GST 3.20.05+
 
 ## Compilation in Genero Studio
 
-1. Load the appmenu.4pw project
+1. Load the crypto.4pw project
 2. Build the project
 
 ## Usage
@@ -29,11 +27,14 @@ GST 3.20.05+
 AES (Advanced Encryption Standard) is a specification for the encryption of electronic data established by the U.S. National Institute of Standards and Technology (NIST) in 2001.
 The algorithm described by AES is a symmetric-key algorithm, meaning the same key is used for both encrypting and decrypting the data.
 
-4gl encryption is based on W3C XML Encryption Syntax and Processing : https://www.w3.org/TR/xmlenc-core1/#sec-Padding
+4gl encryption is based on W3C XML Encryption Syntax and Processing : 
+
+https://www.w3.org/TR/xmlenc-core1/#sec-Padding
 
 ### Genero
 
 Encrypt
+
 http://4js.com/online_documentation/fjs-fgl-manual-html/#fgl-topics/c_gws_XmlEncryption_EncryptString.html
 
 ```
@@ -44,6 +45,7 @@ xml.Encryption.EncryptString(
 ```
 
 Decrypt
+
 http://4js.com/online_documentation/fjs-fgl-manual-html/#fgl-topics/c_gws_XmlEncryption_DecryptString.html
 
 ```
