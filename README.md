@@ -75,5 +75,5 @@ byte[] decrypted_pad = cipherDecrypt.doFinal(encryptedBytes);
 ```
 
 ### Other
-- Initialization vector (what it is, how to use in 4gl/java)
-- Padding (required to implement java decryption)
+- Initialization vector
+- Padding
