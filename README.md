@@ -36,7 +36,7 @@ The algorithm described by AES is a symmetric-key algorithm, meaning the same ke
 Encrypt
 http://4js.com/online_documentation/fjs-fgl-manual-html/#fgl-topics/c_gws_XmlEncryption_EncryptString.html
 
-```C++
+```
 xml.Encryption.EncryptString(
    key xml.CryptoKey,
    strToEncrypt STRING )
@@ -46,7 +46,7 @@ xml.Encryption.EncryptString(
 Decrypt
 http://4js.com/online_documentation/fjs-fgl-manual-html/#fgl-topics/c_gws_XmlEncryption_DecryptString.html
 
-```golang
+```
 xml.Encryption.DecryptString(
    key xml.CryptoKey ,
    strToDecrypt STRING )
