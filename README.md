@@ -33,7 +33,7 @@ https://www.w3.org/TR/xmlenc-core1/#sec-Padding
 
 ### Genero
 
-Encrypt
+- Encrypt
 
 http://4js.com/online_documentation/fjs-fgl-manual-html/#fgl-topics/c_gws_XmlEncryption_EncryptString.html
 
@@ -44,7 +44,7 @@ xml.Encryption.EncryptString(
   RETURNS STRING
 ```
 
-Decrypt
+- Decrypt
 
 http://4js.com/online_documentation/fjs-fgl-manual-html/#fgl-topics/c_gws_XmlEncryption_DecryptString.html
 
@@ -57,14 +57,14 @@ xml.Encryption.DecryptString(
 
 ### Java
 
-Encryp
+- Encryp
 ```java
 Cipher cipher = Cipher.getInstance("AES/CBC/PKCS5Padding");    
 cipher.init(Cipher.ENCRYPT_MODE, secretKey, ivParameterSpec);
 byte[] encrypted = cipher.doFinal(strToEncrypt.getBytes("UTF-8"));
 ```
 
-Decrypt
+- Decrypt
 ```java
 Cipher cipherDecrypt = Cipher.getInstance("AES/CBC/NoPadding");
 cipherDecrypt.init(Cipher.DECRYPT_MODE, secretKey, ivParameterSpec);
